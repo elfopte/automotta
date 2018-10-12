@@ -27,6 +27,18 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+
+# con esta configuracion le decimos que una vez que el ususario 
+# haya sido autenticado de manera correcta sea redirigido 
+# a la raiz de mi sitio web
+
+LOGIN_REDIRECT_URL = "/"
+
+
+# aqui debuelve a la raiz de login
+
+LOGOUT_REDIRECT_URL = "/accounts/login"
+
 MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
 
 # Application definition
@@ -40,7 +52,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'core',
     'accounts',
-    
+
 ]
 
 MIDDLEWARE = [

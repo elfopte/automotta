@@ -3,6 +3,7 @@ from .models import Automovil, Marca
 #importamos la mensajeria de django
 from django.contrib import messages
 
+from django.contrib.auth.decorators import login_required
 
 
 #nuevo comentario
@@ -25,7 +26,7 @@ def listado(request):
         'autos':autos
     })
 
-
+@login_required
 def formulario(request):
     marcas = Marca.objects.all()
     #declaramos el diccionario de variables que se enviaran al template
