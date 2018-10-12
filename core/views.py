@@ -4,6 +4,9 @@ from .models import Automovil, Marca
 from django.contrib import messages
 
 
+
+#nuevo comentario
+
 # Create your views here.
 
 def home(request):
